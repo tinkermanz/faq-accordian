@@ -10,11 +10,17 @@
 	--light-pink: hsl(275, 100%, 97%);
 	--grayish-purple: hsl(292, 16%, 49%);
 	--dark-purple: hsl(292, 42%, 14%);
+	/* overflow: hidden; */
 }
 
 @font-face {
 	font-family: "Work Sans", sans-serif;
 	src: url("../assets/fonts/static/WorkSans-Regular.ttf");
+}
+
+.question-div:hover,
+.question-div:active {
+	color: purple;
 }
 
 .background-section {
@@ -67,6 +73,8 @@
 	letter-spacing: 0.5px;
 	color: var(--dark-purple);
 	font-weight: 800;
+	font-size: large;
+	cursor: pointer;
 }
 
 .answer-div {
@@ -75,7 +83,7 @@
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 	color: var(--grayish-purple);
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 0.8px;
 	line-height: 1.6;
 	width: min-content;
@@ -88,4 +96,37 @@
 button {
 	border: none;
 	background-color: white;
+	cursor: pointer;
+}
+
+.attribution {
+	text-align: center;
+}
+
+/* adding mobile responsibe media query */
+
+@media screen and (max-width: 23.438rem) {
+	.background-section {
+		background-size: auto;
+	}
+
+	.accordion-div {
+		padding: 1rem;
+		min-width: 90%;
+	}
+	.title-div {
+		margin-bottom: 0.5rem;
+	}
+	.title-div__title {
+		font-size: 1.5rem;
+	}
+	.question-div {
+		font-size: 1rem;
+	}
+
+	.answer-div {
+		margin-top: 1.4rem;
+		margin-bottom: 0.1rem;
+		font-size: 0.8rem;
+	}
 }
